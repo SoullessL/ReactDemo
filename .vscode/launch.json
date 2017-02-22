@@ -7,7 +7,6 @@
             "request": "launch",
             "url": "http://localhost:8080/build/index.html",
             "webRoot": "${workspaceRoot}",
-            "preLaunchTask": "webpack run dev",
             "sourceMaps": true
         },
         {
