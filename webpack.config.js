@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',
@@ -15,7 +16,19 @@ module.exports = {
                     presets: ['es2015', 'react'], // es2015 处理 ES6 语法，react 处理 jsx 语法
                     plugins: ["transform-class-properties"]
                 }
-            }
+            },
+            { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, loader: 'url-loader?limit=100000' }
         ]
     },
+    plugins: [
+        new CopyWebpackPlugin([
+            {
+                from: 'node_modules/font-awesome/css',
+                to: 'content/css'
+            },
+            {
+                from: 'node_modules/font-awesome/fonts',
+                to: 'content/fonts'
+            }
+        ])],
 };
