@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBarMain from './AppBar.jsx';
+import StepperRequest from './Stepper.jsx';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -10,9 +11,14 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 const App = () => (
-  <MuiThemeProvider>
-    <AppBarMain />
-  </MuiThemeProvider>
+  <div>
+    <MuiThemeProvider>
+      <AppBarMain />
+    </MuiThemeProvider>
+    <MuiThemeProvider>
+      <StepperRequest />
+    </MuiThemeProvider>
+  </div>
 );
 
 ReactDOM.render(

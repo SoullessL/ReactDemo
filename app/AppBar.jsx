@@ -38,8 +38,8 @@ export default class AppBarReact extends React.Component {
           />
         <Drawer open={this.state.open}>
           <AppBar onClick={() => this.setState({ open: !this.state.open })} title="HR Status" />
-          <MenuItem onClick={() => this.setState({ open: !this.state.open })}>Menu Item</MenuItem>
-          <MenuItem onClick={() => this.setState({ open: !this.state.open })}>Menu Item 2</MenuItem>
+          <MenuItem onClick={() => this.setState({ open: !this.state.open })}>Request</MenuItem>
+          <MenuItem onClick={() => this.setState({ open: !this.state.open })}>Category</MenuItem>
         </Drawer>
       </div>
     );
